@@ -1,5 +1,5 @@
 var CACHE_NAME = 'mdl-portfolio-cache-v1';
-var startUrl = '/index.html';
+var startUrl = '/';
 var urlsToCache = [
   startUrl,
   '/styles/main.css',
