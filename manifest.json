@@ -14,14 +14,14 @@
         "type": "image/png"
       }
     ],
-    "start_url": "https://ronaldogpp.github.io/UTSAMBW",
+    "start_url": "https://ronaldogpp.github.io/UTSAMBW/",
     "display": "standalone",
     "theme_color": "#3f51b5",
     "background_color": "#fafafa",
     "offline_access": true,
     "prefer_related_applications": false,
     "related_applications": [],
-    "scope": "https://ronaldogpp.github.io/UTSAMBW",
+    "scope": "https://ronaldogpp.github.io/UTSAMBW/",
     "serviceworker": {
       "src": "sw.js",
       "scope": "/UTSAMBW"
