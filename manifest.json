@@ -21,10 +21,10 @@
     "offline_access": true,
     "prefer_related_applications": false,
     "related_applications": [],
-    "scope": "/",
+    "scope": "/UTSAMBW",
     "serviceworker": {
       "src": "sw.js",
-      "scope": "/"
+      "scope": "/UTSAMBW"
     },
     "cache": [
       "./index.html",
