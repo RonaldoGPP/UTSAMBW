@@ -21,10 +21,10 @@
     "offline_access": true,
     "prefer_related_applications": false,
     "related_applications": [],
-    "scope": "https://ronaldogpp.github.io/",
+    "scope": "/",
     "serviceworker": {
       "src": "sw.js",
-      "scope": "https://ronaldogpp.github.io/"
+      "scope": "/"
     },
     "cache": [
       "./index.html",
