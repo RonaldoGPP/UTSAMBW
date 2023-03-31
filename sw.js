@@ -1,7 +1,7 @@
 var CACHE_NAME = 'mdl-portfolio-cache-v1';
-var startUrl = '/';
 var urlsToCache = [
-  startUrl,
+  '/',
+  '/index.html',
   '/styles/main.css',
   '/scripts/main.js',
   '/images/about-header.jpg',
@@ -46,17 +46,13 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-  event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        if (response) {
-          return response;
-        }
-        var requestUrl = new URL(event.request.url);
-        if (requestUrl.origin === location.origin && requestUrl.pathname === startUrl) {
-          return caches.match(startUrl);
-        }
-        return fetch(event.request);
-      })
-  );
-});
+    event.respondWith(
+      caches.match(event.request)
+        .then(function(response) {
+          if (response) {
+            return response;
+          }
+          return fetch(event.request);
+        })
+    );
+  });
