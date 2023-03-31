@@ -1,7 +1,7 @@
 var CACHE_NAME = 'mdl-portfolio-cache-v1';
+var startUrl = '/index.html';
 var urlsToCache = [
-  '/',
-  '/index.html',
+  startUrl,
   '/styles/main.css',
   '/scripts/main.js',
   '/images/about-header.jpg',
@@ -51,6 +51,10 @@ self.addEventListener('fetch', function(event) {
       .then(function(response) {
         if (response) {
           return response;
+        }
+        var requestUrl = new URL(event.request.url);
+        if (requestUrl.origin === location.origin && requestUrl.pathname === startUrl) {
+          return caches.match(startUrl);
         }
         return fetch(event.request);
       })
